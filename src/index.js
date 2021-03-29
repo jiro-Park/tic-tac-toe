@@ -113,9 +113,30 @@ class Game extends React.Component {
             onClick={i => this.handleClick(i)}
           />
         </div>
+        
+
+
+
+
+
+
+
+
         <div className="game-info">
           <div>{status}</div>
           <ol>{moves}</ol>
+          <button onClick={
+          () => {this.state = {
+            history: [
+              {
+                squares: Array(9).fill(null)
+              }
+            ],
+            stepNumber: 0,
+          }
+        }
+               
+      }> restart</button>
         </div>
       </div>
     );
